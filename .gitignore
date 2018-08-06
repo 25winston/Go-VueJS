@@ -1,0 +1,8 @@
+.env
+package-lock.json
+.vscode/
+vendor/
+node_modules/
+docker-compose.yml
+public/*
+!public/.gitignore

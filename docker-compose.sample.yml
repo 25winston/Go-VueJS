@@ -1,0 +1,24 @@
+version: '2'
+
+services:
+  mysql.local:
+    image: mysql:5
+    restart: always
+    ports:
+      - 33306:3306
+    args:
+      - character-set-server=utf8
+      - collation-server=utf8_general_ci
+    volumes:
+      - C:/docker/share/mysql/data:/var/lib/mysql
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: yes
+      MYSQL_ROOT_PASSWORD:
+
+  redis.local:
+    image: redis
+    restart: always
+    ports:
+      - 36379:6379
+    volumes:
+      - C:/docker/share/redis/data:/data
